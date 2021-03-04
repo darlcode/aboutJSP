@@ -19,7 +19,9 @@
 
 - JSP 기본요소
 
-  - 주석(Comments): 개발자가 개발한 코드 혹은 다른 개발자가 디버깅하거나 코드를 수정해야 할 때 코드의 이해가 쉽도록 가이드의 역할을 하는 코드의 해설을 적어 놓은 글을 뜻함
+  - **주석(Comments)** 
+
+    개발자가 개발한 코드 혹은 다른 개발자가 디버깅하거나 코드를 수정해야 할 때 코드의 이해가 쉽도록 가이드의 역할을 하는 코드의 해설을 적어 놓은 글을 뜻함
 
     - HTML 주석 
 
@@ -52,7 +54,7 @@
 
       선언문(Declaration) 혹은 스크립틀릿(Scriptlet)에서만 사용되어 클라이언트에 전송되지 않음
 
-  - JSP 지시어(Directive)
+  - **JSP 지시어(Directive)**
 
     ```jsp
     <%@ ... %>
@@ -85,15 +87,68 @@
 
       여러개의 page 지시어에 나누어 지정할 수도 있으나, import 속성을 제외한 나머지 속성을 하나의 페이지에서 오직 한 번씩만 지정할 수 있음
 
-      - language 속성
+      - session 속성
+
+        ```
+        # HTTP 프로토콜: 클라이언트로부터 요청이 들어오면 새로운 커넥션을 생성하여 요청에 대해 응답을 회신한 후 그 커넥션을 끊는다. --> stateless 특성
+        동일한 클라이언트에 대해 정보를 유지할 필요가 있는 경우, 다른 클라이언트와 현재 정보가 유지되어야 할 클라이언트를 구별할 방법 --> 세션 관리(Session Management)
+        가상의 커넥션(Virtual Connection)을 HTTP 세션(Http Session)이라고도 한다.
+        JSP내에서 위와 같은 세션을 활용할 수 있도록 하는 설정이 session 속성
+        ```
+
+      - contentType  속성
+
+        ```
+        JSP가 전송할 응답의 형태가 어떠한 MIME(Multipurpose Internet Mail Extension) 형식으로 되어 있는지를 지정하는 속성이다.
+        ```
 
     - include 지시어
 
+      ```jsp
+      <%@ include file="header.jsp" %>
+      ```
+
+      특정한 JSP파일 또는 HTML 파일을 해당 JSP 페이지에 삽입할 수 있도록 하는 기능을 제공하는 지시어
+
     - taglib 지시어
 
-  - 스크립트 요소(Scripting Elements)
+      ```jsp
+      <%@ taglib uri="uri 주소" prefix="namespace" %>
+      ```
 
-  - 액션 태그(Action tag)
+      JSTL(JSP Standard Tag Language)이나 커스텀 태그 등 태그 라이브러리를 JSP에서 사용할 때 접두사를 지정하기 위해 사용됨.
+
+      - uri 속성
+
+        태그 라이브러리에서 정의한 태그와 속성 정보를 저장한 TLD(Tag Library Descriptor) 파일이 존재하는 위치를 지정
+
+      - prefix 속성
+
+        사용할 커스텀 태그의 네임 스페이스(Name Space)를 지정
+
+  - **스크립트 요소(Scripting Elements)**
+
+    JSP 페이지 내에 자바의 코드를 삽입하기 위해 사용
+
+    - 선언문(Declaration)
+
+      ```jsp
+      <%!
+      private String str="JSP 스터디";
+      public String checkStr() {
+          if (str==null) return "no";
+          else return "ok";
+      }
+      %>
+      ```
+
+      JSP 페이지에서 자바 코드에서 말하는 `멤버 변수`와 `메소드`를 선언하기 위해 사용
+
+    - 스크립틀릿(Scriptlet)
+
+    - 표현식(Expression)
+
+  - **액션 태그(Action tag)**
 
   - 
 
