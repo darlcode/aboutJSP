@@ -19,10 +19,82 @@
 
 - JSP 기본요소
 
-  - 주석(Comments)
+  - 주석(Comments): 개발자가 개발한 코드 혹은 다른 개발자가 디버깅하거나 코드를 수정해야 할 때 코드의 이해가 쉽도록 가이드의 역할을 하는 코드의 해설을 적어 놓은 글을 뜻함
+
+    - HTML 주석 
+
+      ```html
+      <!-- HTML 주석입니다. -->
+      ```
+
+      클라이언트의 브라우저에 전송되는 HTML문서에 포함됨
+
+    - JSP 주석
+
+      ```jsp
+      <%-- JSP 주석입니다. %-->
+      ```
+
+      숨겨진 주석(Hidden Comment) : JSP파일 내에서 완전히 무시되어 치리됨. 클라이언트에 전송되지 않음
+
+    - 자바 스타일 주석
+
+      ```java
+      <%
+      /* 여러 줄
+      자바 주석입니다. */
+      %>
+      
+      <%
+      // 한줄 자바 주석입니다.
+      %>
+      ```
+
+      선언문(Declaration) 혹은 스크립틀릿(Scriptlet)에서만 사용되어 클라이언트에 전송되지 않음
+
   - JSP 지시어(Directive)
+
+    ```jsp
+    <%@ ... %>
+    ```
+
+    JSP 파일 내에서 JSP를 실행할 컨테이너에서 해당 페이지를 어떻게 처리할 것인가에 대한 설정 정보들을 지정해줌
+
+    - page 지시어
+
+      JSP 페이지에 대한 속성을 지정하는 지시어
+
+      ```jsp
+      <%@ page 속성1="값1" 속성2="값2" ... %>
+      ```
+
+      | 속성         | 사용법                      | 기본값                       | 설명                                      |
+      | ------------ | --------------------------- | ---------------------------- | ----------------------------------------- |
+      | language     | language="java"             | java                         | 스크립트 요소에서 사용할 언어 설정        |
+      | extends      | extends="클래스명"          | 없음                         | 상속받을 클래스를 설정                    |
+      | import       | import="패키지 클래스명"    | 없음                         | import할 패키지 클래스 설정               |
+      | session      | session="true"              | true                         | HttpSession 사용여부를 설정               |
+      | buffer       | buffer="16kb"               | 8kb                          | JSP 페이지의 출력 버퍼 크기를 설정        |
+      | autoFlush    | autoFlush="true"            | true                         | 출력 버퍼가 다 찼을 경우 처리 방법을 설정 |
+      | isThreadSafe | isThreadSafe="true"         | true                         | 다중 스레드의 동시 실행 여부를 설정       |
+      | info         | info="페이지 설명"          | 없음                         | 페이지 설명                               |
+      | errorPage    | errorPage="에러 페이지.jsp" | 없음                         | 에러 페이지로 사용할 페이지를 지정        |
+      | contentType  | contentType="text/html"     | text/html:charset=ISO-8859-1 | JSP 페이지가 생성할 문서의 타입을 지정    |
+      | isErrorPage  | isErrorPage="false"         | false                        | 현재 페이지를 에러 페이지로 지정          |
+      | pageEncoding | pageEncoding="euc-kr"       | ISO-8859-1                   | 현재 페이지의 문자 인코딩 타입 설정       |
+
+      여러개의 page 지시어에 나누어 지정할 수도 있으나, import 속성을 제외한 나머지 속성을 하나의 페이지에서 오직 한 번씩만 지정할 수 있음
+
+      - language 속성
+
+    - include 지시어
+
+    - taglib 지시어
+
   - 스크립트 요소(Scripting Elements)
+
   - 액션 태그(Action tag)
+
   - 
 
 - 서블릿(Servlet)
