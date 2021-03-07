@@ -10,7 +10,7 @@
 	
 	try{
 		Class.forName(driver);
-		conn=DriverManager.getConnection(url, "java", "java");
+		conn=DriverManager.getConnection(url, "c##java", "java");
 		
 		connect=true;
 		

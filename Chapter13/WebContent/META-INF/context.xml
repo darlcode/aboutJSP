@@ -2,11 +2,11 @@
   <Resource name="jdbc/OracleDB" 
    auth="Container"
    type="javax.sql.DataSource" 
-   username="java" 
+   username="c##java" 
    password="java"
    driverClassName="oracle.jdbc.driver.OracleDriver"
    factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory"
-   url="jdbc:oracle:thin:@127.0.0.1:1521:XE"
+   url="jdbc:oracle:thin:@localhost:1521:XE"
    maxActive="500" 
    maxIdle="100"/>  
 </Context>
