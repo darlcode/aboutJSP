@@ -11,7 +11,7 @@
 		border: 1px solid gray;
 		text-align: center;
 	}
-	.td_tittle {
+	.td_title {
 		font-weight : bold;
 		font-size : x-large;
 	}
@@ -21,7 +21,7 @@
 <form name="joinform" action-="joinProcess.jsp" method="post">
 <table border=1>
 	<tr>
-		<td colspan="2" class="td_tittle">
+		<td colspan="2" class="td_title">
 			회원 가입 페이지
 		</td>
 	</tr>

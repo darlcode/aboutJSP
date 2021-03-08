@@ -11,7 +11,7 @@
 		border : 1px solid gray;
 		text-align : center;
 	}
-	.td_tittle{
+	.td_title{
 		font-weight : bold;
 		font-size : x-large;
 	}
@@ -21,7 +21,7 @@
 <form name="loginform" action="loginProcess.jsp" method="post">
 <table>
 	<tr>
-		<td colspan="2" class = "td_tittle">
+		<td colspan="2" class = "td_title">
 			로그인 페이지
 		</td>
 	</tr>
