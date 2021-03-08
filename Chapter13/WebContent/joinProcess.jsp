@@ -5,7 +5,7 @@
 <%@ page import="javax.naming.*" %>
 
 <%
-	request.setCharacterEncoding("UTF=8");
+	request.setCharacterEncoding("UTF-8");
 	String id=request.getParameter("id");
 	String pass=request.getParameter("pass");
 	String name=request.getParameter("name");

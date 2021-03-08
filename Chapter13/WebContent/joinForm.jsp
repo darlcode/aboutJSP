@@ -18,7 +18,7 @@
 </style>
 </head>
 <body>
-<form name="joinform" action-="joinProcess.jsp" method="post">
+<form name="joinform" action="joinProcess.jsp" method="post">
 <table border=1>
 	<tr>
 		<td colspan="2" class="td_title">
