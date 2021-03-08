@@ -7,7 +7,7 @@
 		id=(String)session.getAttribute("id");
 	} else{
 		out.println("<script>");
-		out.println("location.href='loginForm'");
+		out.println("location.href='loginForm.jsp'");
 		out.println("</script>");
 	}
 %>

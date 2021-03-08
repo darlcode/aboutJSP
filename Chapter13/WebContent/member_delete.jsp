@@ -9,7 +9,7 @@
 	if ((session.getAttribute("id"))==null ||
 			(!((String)session.getAttribute("id")).equals("admin"))) {
 		out.println("<script>");
-		out.println("location.href='loginForm.jsp");
+		out.println("location.href='loginForm.jsp'");
 		out.println("</script>");
 	}
 	
@@ -20,7 +20,7 @@
 	
 	try {
 		Context init = new InitialContext();
-		DataSource ds = (DataSource) init.lookup("java:comp/env/jdbc/OralceDB");
+		DataSource ds = (DataSource) init.lookup("java:comp/env/jdbc/OracleDB");
 		conn=ds.getConnection();
 		
 		pstmt=conn.prepareStatement("DELETE FROM member WHERE id=?");
