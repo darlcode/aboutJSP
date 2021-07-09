@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            table {
+                border-collapse: collapse;
+                border-top: solid 3px black;
+            }
+            td {
+                border-bottom: solid 1px #cccccc;
+                padding: 10px;
+            }
+            .col1 {
+                width: 80px;
+            }
+            input {
+                width: 500px;
+                height: 25px;
+            }
+            textarea {
+                width: 500px;
+                height: 100px;
+            }
+            #buttons {
+                width: 620px;
+                text-align: right;
+                margin-top: 20px;
+            }
+            button {
+                padding: 5px 20px;
+                margin-left: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h4>게시판 글쓰기 폼</h4>
+        <table>
+            <tr><td class="col1">이름</td><td>홍길동</td></tr>
+            <tr><td class="col1">제목</td><td><input type="text"></td></tr>
+            <tr><td class="col1">글 내용</td><td><textarea></textarea></td></tr>
+            <tr><td class="col1">파일</td><td><input type="file"></td></tr>
+        </table>
+        <div id="buttons">
+            <button>저장하기</button> <button>목록보기</button>
+        </div>
+    </body>
+</html>
